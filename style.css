@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,200&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0px;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.heading{
+    text-align: center;
+    color:gold;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:gray;
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color:gold;
+    font-weight: bolder;
+}
+header .logo span{
+    color:white;
+}
+
+header .navbar a{
+    font-size: 25px;
+    color:white;
+    margin-left: 3rem;
+    
+}
+header .navbar a:hover{
+    color:blue;
+    
+}
+
+.container{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 9%;
+    position:relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(images/wall_harry.jpg);
+}
+
+
+.container .content{
+    flex:1 1 200px;
+}
+
+.container .image{
+    flex:1 1 50px;
+    position: relative;
+}
+
+.container .image .Car{
+    width: 100%;
+    display: none;
+}
+
+.container .image .Car.active{
+    display: initial;
+    animation: animate .5s cubic-bezier(.45,1.63,.98,1.55);
+}
+
+@keyframes animate{
+    0%{
+    transform: rotate(0deg) scale(.7);
+    }
+}
+
+
+.container .content h3{
+    color:brown;
+    font-size: 100px;
+}
+
+.container .content p{
+    color: white;
+    font-size: 15px;   
+}
+
+
+.container .content .btn:hover{
+    background:red;
+}
+
+.container .left,.container .right{
+    position:absolute;
+    top: 45%;
+    transform: translate(-50%);
+    height: 40px;
+    width: 40px;
+    border: 2px solid #333;
+    color: #333;
+    line-height: 60px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container .left{
+    left: 50px;
+    padding-bottom: 60px;
+}
+.container .right{
+    right: 30px;
+    padding-bottom: 60px;
+}
+
+.container .left:hover{
+    background: #333;
+    color: #333;
+}
+
+.container .right:hover{
+    background: #333;
+    color: #333;
+}
+
+.gallery{
+    background: gray;
+}
+
+.gallery .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .box-container .box{
+    flex: 1 1 30rem;
+    height: 40rem;
+    overflow: hidden;
+    background: #333;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.gallery .box-container .box img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .heading span{
+    color: #fff;
+}
+
+.gallery .box-container .box .info{
+    position: absolute;
+    bottom: -120%; left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #fff;
+    padding: 2rem;
+    border:.3rem solid var(--red);
+    border-radius: .5rem;
+}
+
+.gallery .box-container .box:hover .info{
+    bottom: 2rem;
+}
+
+.gallery .box-container .box .info h3{
+    background:red;
+    color: #fff;
+    border-radius: .5rem;
+    margin:0 5rem;
+    margin-top: -3.7rem;
+    padding:.5rem 2rem;
+    font-size: 2.5rem;
+}
+
+
+
+.gallery .box-container .box .info p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: .5rem;
+    padding-top: 2rem;
+
+}
